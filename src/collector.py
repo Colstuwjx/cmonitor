@@ -54,7 +54,7 @@ class ContainerAppMetricsCollector(MetricsCollector):
         self.configs = configs
 
         # initial modules.
-        # query the `docker-monitor` configured modules,
+        # query the CMonitor configured modules,
         # and sync them into application container.
         self.client.sync_modules(container_id)
 
