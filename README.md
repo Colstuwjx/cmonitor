@@ -9,6 +9,10 @@ CMonitor is dead simple and just:
 * use `docker cp` to sync modules(now, they are shells);
 * use `docker exec` to execute them and collect metrics. 
 
+## limitation
+CMonitor uses `docker exec`, `docker cp` to collect metrics,
+it's really unsafe and not predictable...
+
 ## build
 
 ```
