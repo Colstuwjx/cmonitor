@@ -1,0 +1,29 @@
+socket: 'unix://var/run/docker.sock'
+
+# tls:
+#   config_path: 'cert'
+#   cert: 'yourcert.pem'
+#   key: 'yourkey.pem'
+#   ca: 'yourca.pem'
+
+backend:
+  name: PromCache
+  prom_textfile_style: 'container_*.prom'
+  prom_textfile_regex: 'container\_([0-9a-z]+)\_([0-9a-z.]*).prom'
+  # prom textfile dir.
+  data_dir: '/tmp/'
+  data_perfix: 'container_'
+
+registered_modules:
+  ss.sh:
+    name: 'ss.sh'
+    annotation: |
+     # HELP container_tcp_state A metric with the tcp connections in specified state label.
+     # TYPE container_tcp_state gauge
+
+modules_src_dir: './modules/'
+modules_dst_dir: '/tmp/'
+modules_dst_dir_perfix: '/tmp/modules/'
+
+collect_interval: 30
+check_interval: 30

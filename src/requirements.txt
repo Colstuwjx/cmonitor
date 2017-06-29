@@ -1,0 +1,14 @@
+backports.ssl-match-hostname==3.5.0.1
+# docker-py should ensure >= 1.8.1
+docker-py==1.8.1
+PyYAML==3.12
+ipaddress==1.0.16
+python-dateutil==2.5.3
+pytz==2016.6.1
+requests==2.10.0
+six==1.10.0
+websocket-client==0.37.0
+wsgiref==0.1.2
+Flask==0.11.1
+Werkzeug==0.11.10
+supervisor==3.3.1
